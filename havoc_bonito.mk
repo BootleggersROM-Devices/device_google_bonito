@@ -26,7 +26,7 @@ TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # Include DU common configuration
-include vendor/bootleggers/config/common_full_phone.mk
+include vendor/havoc/config/common_full_phone.mk
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/bonito/aosp_bonito.mk)
@@ -35,7 +35,7 @@ $(call inherit-product, device/google/bonito/aosp_bonito.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := bootleg_bonito
+PRODUCT_NAME := havoc_bonito
 PRODUCT_DEVICE := bonito
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3a XL
@@ -43,7 +43,6 @@ PRODUCT_MANUFACTURER := Google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bonito \
-    DEVICE_MAINTAINERS=stebomurkn420 \
     BUILD_FINGERPRINT=google/bonito/bonito:9/PQ3B.190705.003/5622519:user/release-keys \
     PRIVATE_BUILD_DESC="bonito-user 9 PQ3B.190705.003 5622519 release-keys"
 
